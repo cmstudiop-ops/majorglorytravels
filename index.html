@@ -51,7 +51,7 @@ get("authForm").addEventListener("submit",async e=>{e.preventDefault();const ema
 client.auth.onAuthStateChange(()=>{setTimeout(updateAccount,0)});updateAccount();
 const form=get("flightForm");const cloned=form.cloneNode(true);form.replaceWith(cloned);cloned.addEventListener("submit",async e=>{e.preventDefault();await searchFlights()});
 const AIRPORTS={MQP:"Kruger Mpumalanga",JNB:"Johannesburg O.R. Tambo",CPT:"Cape Town",DUR:"Durban King Shaka",HLA:"Lanseria",BFN:"Bloemfontein",PLZ:"Gqeberha",GRJ:"George",LHR:"London Heathrow",MPM:"Maputo"};
-const ALIASES={JHB:"JNB",JOHANNESBURG:"JNB",NELSPRUIT:"MQP",MBOMBELA:"MQP",CAPE TOWN:"CPT",CAPETOWN:"CPT",DURBAN:"DUR",MAPUTO:"MPM"};
+const ALIASES={JHB:"JNB",JOHANNESBURG:"JNB",NELSPRUIT:"MQP",MBOMBELA:"MQP","CAPE TOWN":"CPT",CAPETOWN:"CPT",DURBAN:"DUR",MAPUTO:"MPM"};
 const airportCode=v=>{const s=String(v||"").trim().toUpperCase();return ALIASES[s]||s};
 for(const id of ["flightFrom","flightTo"]){get(id).addEventListener("blur",()=>{const v=airportCode(get(id).value);if(AIRPORTS[v])get(id).value=v})}
 let lastOffers=[],fxRates={ZAR:1},fxDate=null;
