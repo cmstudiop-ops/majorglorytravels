@@ -97,13 +97,77 @@ html,body{width:100%;max-width:100%;overflow-x:clip}*,*::before,*::after{min-wid
   .mg-app-nav{padding-left:4px;padding-right:4px}
   .mg-app-nav-item span{font-size:9px}
 }
+
+/* Duffel Stays: search, photo cards and mobile results */
+.mg-stays-field-help{font-size:11px;color:#73899a;margin:13px 0 0;line-height:1.6}
+.mg-stays-fields .field:first-child{grid-column:auto}
+.mg-stays-section[hidden],.mg-stays-empty[hidden],.mg-stays-access[hidden]{display:none!important}
+.mg-stays-section{padding:53px 0 68px;background:linear-gradient(170deg,#f4fafb,#fff 55%);scroll-margin-top:95px}
+.mg-stays-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px}
+.mg-stays-heading h2{font:800 clamp(25px,3.4vw,35px)/1.13 Manrope;letter-spacing:-.045em;margin:10px 0}
+.mg-stays-heading p{font-size:13px;line-height:1.6;color:#657d8d;margin:0}
+.mg-stays-test-tag{border:1px solid #e5dab9;color:#846a37;background:#fff6e5;border-radius:50px;padding:9px 13px;white-space:nowrap;font-size:10px;font-weight:800}
+.mg-stays-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px solid #e3ebef;padding-bottom:15px;margin-bottom:23px;color:#718797;font-size:12px}
+.mg-stays-toolbar label{display:flex;align-items:center;gap:10px;font-weight:700}
+.mg-stays-toolbar select{background:#fff;border:1px solid #dae6eb;border-radius:10px;padding:9px 11px;font-size:12px;color:#27495c}
+.mg-stays-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.mg-stay-card{min-width:0;overflow:hidden;background:#fff;border:1px solid #e0e9ef;border-radius:20px;box-shadow:0 10px 30px #173d4910;display:flex;flex-direction:column}
+.mg-stay-media{height:177px;position:relative;overflow:hidden;background:linear-gradient(145deg,#d9f0f0,#e7ebf1)}
+.mg-stay-media img{width:100%;height:100%;object-fit:cover;display:block}
+.mg-stay-media.no-photo{display:grid;place-items:center}
+.mg-stay-media.no-photo svg{width:48px;height:48px;color:#76a8ad}
+.mg-stay-test-label{position:absolute;top:12px;left:12px;background:#fff;color:#21495a;border-radius:8px;font-size:10px;font-weight:800;padding:8px 10px;box-shadow:0 5px 15px #0001}
+.mg-stay-body{padding:19px;display:flex;flex:1;flex-direction:column;gap:10px}
+.mg-stay-name{font:800 17px/1.3 Manrope;margin:0;letter-spacing:-.018em;color:#123148;overflow-wrap:break-word}
+.mg-stay-address{font-size:12px;color:#708696;line-height:1.5;margin:0}
+.mg-stay-metrics{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.mg-stay-rating{background:#e5f5ee;color:#1f7c59;border-radius:8px;padding:5px 8px;font-weight:800;font-size:11px}
+.mg-stay-stars{font-size:11px;color:#607c87;font-weight:700}
+.mg-stay-amenities{display:flex;flex-wrap:wrap;gap:6px;margin-top:1px}
+.mg-stay-amenities span{border-radius:8px;background:#f3f7f8;color:#4a6876;padding:5px 7px;font-size:10px;font-weight:700}
+.mg-stay-footer{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:7px;border-top:1px solid #ebf0f3;padding-top:14px}
+.mg-stay-price{min-width:0}
+.mg-stay-price strong{display:block;color:#123149;font:800 22px/1.15 Manrope;letter-spacing:-.04em;white-space:nowrap}
+.mg-stay-price small{display:block;font-size:10px;line-height:1.5;color:#728797;margin-top:4px}
+.mg-stay-details-btn{flex:none;border:0;background:#0a7f85;color:white;border-radius:10px;font-size:11px;font-weight:800;padding:11px 12px;display:flex;align-items:center;gap:3px}
+.mg-stay-details-btn svg{width:13px;height:13px}
+.mg-stay-expanded{padding:13px;background:#f7fafb;border-radius:11px;border:1px solid #e6edef;font-size:12px;color:#587184;line-height:1.65;overflow-wrap:anywhere}
+.mg-stay-expanded[hidden]{display:none}
+.mg-stay-expanded p{margin:0 0 9px}
+.mg-stay-expanded p:last-child{margin-bottom:0}
+.mg-stays-access,.mg-stays-empty{border:1px solid #dce9ee;background:white;border-radius:20px;padding:29px;color:#617b8a;line-height:1.7}
+.mg-stays-access{border-color:#efdfbd;background:#fff9ee}
+.mg-stays-access h3,.mg-stays-empty h3{font:800 20px Manrope;color:#15354b;margin:0 0 10px}
+.mg-stays-access p,.mg-stays-empty p{font-size:13px;margin:0 0 14px}
+.mg-stays-access a{background:#0b7f86;color:white;display:inline-flex;border-radius:12px;padding:12px 18px;font-size:12px;font-weight:800}
+.mg-stays-empty>svg{color:#0b7e87;margin-bottom:10px}
+.mg-stays-footnote{font-size:11px;color:#728b97;line-height:1.8;margin:24px 0 0}
+@media(max-width:1050px){.mg-stays-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.mg-stays-section{padding:29px 0 50px;scroll-margin-top:78px}.mg-stays-heading{align-items:flex-start;gap:10px}.mg-stays-heading h2{font-size:24px}.mg-stays-heading p{font-size:12px}.mg-stays-test-tag{font-size:9px;padding:7px 8px}.mg-stays-toolbar{margin-bottom:17px;flex-wrap:wrap}.mg-stays-toolbar select{font-size:11px}.mg-stays-grid{grid-template-columns:1fr;gap:12px}.mg-stay-card{display:grid;grid-template-columns:112px minmax(0,1fr);border-radius:15px;min-height:160px}.mg-stay-media{height:100%;min-height:164px}.mg-stay-media.no-photo svg{width:28px;height:28px}.mg-stay-test-label{top:8px;left:6px;padding:5px 6px;font-size:8px}.mg-stay-body{padding:12px 11px;gap:6px}.mg-stay-name{font-size:13px;line-height:1.25}.mg-stay-address{font-size:10px;line-height:1.35}.mg-stay-rating,.mg-stay-stars{font-size:9px}.mg-stay-amenities{gap:4px}.mg-stay-amenities span{font-size:9px;padding:4px 5px}.mg-stay-footer{padding-top:8px;align-items:center;flex-wrap:wrap}.mg-stay-price strong{font-size:16px;letter-spacing:-.04em}.mg-stay-price small{font-size:9px}.mg-stay-details-btn{font-size:10px;padding:9px}.mg-stay-details-btn svg{width:12px;height:12px}.mg-stay-expanded{grid-column:1/-1;margin:0 10px 10px}.mg-stays-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.mg-stays-fields>.field:first-child{grid-column:1/-1}.mg-stays-fields>.field:last-child{grid-column:1/-1}}
+@media(max-width:390px){.mg-stay-card{grid-template-columns:98px minmax(0,1fr)}.mg-stay-price strong{font-size:15px}.mg-stay-body{padding:11px 9px}.mg-stays-test-tag{max-width:110px;white-space:normal;text-align:center}.mg-stays-fields{grid-template-columns:1fr}.mg-stays-fields>.field:first-child,.mg-stays-fields>.field:last-child{grid-column:auto}}
 </style></head><body><div class="top">PROUDLY ROOTED IN MPUMALANGA · OPEN TO THE WORLD</div><header><div class="container nav"><a href="#" class="brand"><span class="brandmark"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span><span>majorglory<span style="color:#087e85">travels</span><small>EXPLORE WITHOUT LIMITS</small></span></a><div class="mobile-menu-backdrop" id="menuBackdrop"></div><nav class="links" id="navlinks" aria-label="Main navigation"><div class="mobile-menu-head"><span>Explore Majorglory</span><button id="closeMenu" type="button" aria-label="Close menu">&times;</button></div><a href="#explore">Explore</a><a href="#services">Our services</a><a href="#why">Why travel with us</a><a href="#contact">Contact</a><a class="mobile-cta" href="#booking">Plan your trip</a></nav><a class="navbtn" href="#booking">Plan your trip <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a href="#booking" class="mg-header-quicksearch" aria-label="Go to travel search"><svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></a><button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="navlinks" aria-label="Open navigation"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div></header>
 <main><section class="hero"><div class="container hero-inner"><span class="eyebrow">Your next chapter starts here</span><h1>From Mpumalanga <em>to anywhere.</em></h1><p>Dream bigger. Go further. Discover a world of possibilities with a travel experience designed around you.</p></div></section>
 <div class="container search-wrap" id="booking"><div class="search"><div class="tabs" role="tablist"><button class="tab active" data-tab="flights"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 21 12 14l-5.8 7-1.3-1.3L8 11 2 8V5l9 3 6.2-6 2.5.7L16 10l6 3v3l-7-1-1 5z"/></svg> &nbsp; Flights</button><button class="tab" data-tab="stays"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v16M3 21h18M9 21v-6h6v6M7 7h.01M12 7h.01M17 7h.01M7 11h.01M12 11h.01M17 11h.01"/></svg> &nbsp; Stays</button><button class="tab" data-tab="buses"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="16" rx="3"/><path d="M4 11h16M8 19v2m8-2v2M8 15h.01M16 15h.01M8 7h8"/></svg> &nbsp; Buses</button></div>
 <div class="panel active" id="flights"><datalist id="airports"><option value="MQP">Kruger Mpumalanga International Airport</option><option value="JNB">Johannesburg O. R. Tambo</option><option value="CPT">Cape Town International</option><option value="DUR">King Shaka Durban</option><option value="HLA">Lanseria</option><option value="BFN">Bloemfontein</option><option value="PLZ">Gqeberha</option><option value="GRJ">George</option><option value="LHR">London Heathrow</option><option value="MPM">Maputo International</option></datalist><div class="triptypes"><label><input type="radio" name="trip" value="round" checked> Round trip</label><label><input type="radio" name="trip" value="oneway"> One way</label></div><form id="flightForm"><div class="fields"><label class="field"><span>From</span><input id="flightFrom" placeholder="Airport code or city" value="MQP" list="airports" maxlength="64" required></label><label class="field"><span>To</span><input id="flightTo" placeholder="Airport code or city" list="airports" maxlength="64" required></label><label class="field"><span>Departure</span><input id="depart" type="date" required></label><label class="field" id="returnField"><span>Return</span><input id="return" type="date"></label><label class="field"><span>Travellers</span><select id="passengers"><option value="1">1 adult</option><option value="2">2 adults</option><option value="3">3 adults</option><option value="4">4 adults</option></select></label></div><div class="search-actions"><span class="hint">Search available Duffel test flights securely. Prices are indicative and not bookable.</span><button class="primary" type="submit">Search flights <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div></form></div>
-<div class="panel" id="stays"><form id="stayForm"><div class="fields"><label class="field"><span>Destination</span><input placeholder="City or destination" required></label><label class="field"><span>Check in</span><input type="date" required></label><label class="field"><span>Check out</span><input type="date" required></label><label class="field"><span>Guests</span><select><option>1 guest</option><option>2 guests</option><option>3 guests</option><option>4 guests</option></select></label></div><div class="search-actions"><span class="hint">Plan your stay below. Live room availability is not connected yet.</span><button class="primary" type="submit">Explore stays <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div></form></div>
+<div class="panel" id="stays"><form id="stayForm"><div class="fields mg-stays-fields">
+  <label class="field"><span>Destination</span><select id="stayDestination" required><option value="mbombela" selected>Mbombela / Nelspruit, Mpumalanga</option><option value="white-river">White River, Mpumalanga</option><option value="malelane">Malelane, Mpumalanga</option><option value="komatipoort">Komatipoort, Mpumalanga</option><option value="hazyview">Hazyview, Mpumalanga</option><option value="sabie">Sabie, Mpumalanga</option><option value="graskop">Graskop, Mpumalanga</option><option value="barberton">Barberton, Mpumalanga</option><option value="bushbuckridge">Bushbuckridge, Mpumalanga</option><option value="emalahleni">eMalahleni, Mpumalanga</option><option value="middelburg">Middelburg, Mpumalanga</option><option value="ermelo">Ermelo, Mpumalanga</option><option value="johannesburg">Johannesburg, Gauteng</option><option value="pretoria">Pretoria, Gauteng</option><option value="cape-town">Cape Town, Western Cape</option><option value="durban">Durban, KwaZulu-Natal</option><option value="gqeberha">Gqeberha, Eastern Cape</option><option value="bloemfontein">Bloemfontein, Free State</option><option value="maputo">Maputo, Mozambique</option><option value="london">London, United Kingdom</option><option value="duffel-test">Duffel Test Hotels — simulated</option></select></label>
+  <label class="field"><span>Check in</span><input id="stayCheckIn" type="date" required></label>
+  <label class="field"><span>Check out</span><input id="stayCheckOut" type="date" required></label>
+  <label class="field"><span>Guests</span><select id="stayAdults"><option value="1">1 adult</option><option value="2" selected>2 adults</option><option value="3">3 adults</option><option value="4">4 adults</option><option value="5">5 adults</option><option value="6">6 adults</option></select></label>
+  <label class="field"><span>Rooms</span><select id="stayRooms"><option value="1" selected>1 room</option><option value="2">2 rooms</option><option value="3">3 rooms</option></select></label>
+ </div><div class="search-actions"><span class="hint">Powered by Duffel Stays in test mode. Supplier access may require approval.</span>
+ <button class="primary" id="staySearchButton" type="submit"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg> Search hotels</button></div>
+ <p class="mg-stays-field-help">Choose a destination from the list. Hotels are shown only when Duffel returns actual test inventory.</p>
+ </form></div>
 <div class="panel" id="buses"><form id="busForm"><div class="fields"><label class="field"><span>Leaving from</span><input placeholder="Town or city" required></label><label class="field"><span>Going to</span><input placeholder="Destination" required></label><label class="field"><span>Travel date</span><input type="date" required></label><label class="field"><span>Passengers</span><select><option>1 passenger</option><option>2 passengers</option><option>3 passengers</option></select></label></div><div class="search-actions"><span class="hint">Plan your route. Live schedules will arrive with our bus supplier integration.</span><button class="primary" type="submit">Find buses <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div></form></div><p class="notice">Duffel flight search uses test inventory. Online bookings and payments are not yet active.</p><div class="accountbar"><span id="accountState">Sign in to search test flights</span><button type="button" id="accountBtn">Sign in</button></div></div></div>
-<section class="mg-service-preview" id="mgServicePreview" hidden aria-live="polite">
+<section class="mg-stays-section" id="mgStaysResults" hidden aria-labelledby="mgStaysTitle"><div class="container">
+  <div class="mg-stays-heading"><div><span class="kicker">DUFFEL STAYS · TEST MODE</span><h2 id="mgStaysTitle">Find your place to stay</h2><p id="mgStaysStatus" role="status" aria-live="polite">Search above to discover available properties.</p></div><span class="mg-stays-test-tag">NO REAL BOOKINGS</span></div>
+  <div class="mg-stays-toolbar"><span id="mgStaysCount">Accommodation search</span><label for="mgStaysSort">Sort <select id="mgStaysSort"><option value="recommended">Recommended</option><option value="price">Lowest indicative ZAR price</option><option value="rating">Highest rating</option></select></label></div>
+  <div id="mgStaysCards" class="mg-stays-grid"></div>
+  <div id="mgStaysEmpty" class="mg-stays-empty" hidden><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8V4m18 4V4M3 16v5m18-5v5M3 10h18a2 2 0 0 1 2 2v5H1v-5a2 2 0 0 1 2-2Zm4 0V7h10v3"/></svg><h3>No accommodation returned</h3><p>Try another destination, different dates or the dedicated Duffel Test Hotels location.</p></div>
+  <div id="mgStaysAccess" class="mg-stays-access" hidden><h3>Stays API access is pending</h3><p>Your Flights test token is connected, but Duffel must enable Stays separately. Request access from Duffel, then search again.</p><a href="https://duffel.com/contact-us" target="_blank" rel="noopener noreferrer">Request Duffel Stays access</a></div>
+  <p class="mg-stays-footnote" id="mgStaysPriceNote">Accommodation search only. Any rates shown are test inventory and cannot be purchased here. ZAR conversion is indicative, not a confirmed payable price.</p>
+</div></section><section class="mg-service-preview" id="mgServicePreview" hidden aria-live="polite">
   <div class="container"><div class="mg-service-hero">
     <div class="mg-service-symbol" id="mgServiceSymbol"><svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v16M3 21h18M9 21v-6h6v6M7 7h2m6 0h2M7 11h2m6 0h2"/></svg></div>
     <div class="mg-service-copy"><span class="kicker" id="mgServiceTag">TRAVEL PLANNING</span>
@@ -147,6 +211,9 @@ function activateTravelTab(name,scroll=false){if(!['flights','stays','buses'].in
  $('#mgServicePreview').hidden=true;
  if(name!=='flights')$('#flightResults').hidden=true;
  else if($('#flightResults').dataset.hasResults==='true')$('#flightResults').hidden=false;
+ const staysResults=$('#mgStaysResults');
+ if(name!=='stays')staysResults.hidden=true;
+ else if(staysResults.dataset.hasResults==='true')staysResults.hidden=false;
  if(scroll)$('#booking').scrollIntoView({behavior:'smooth',block:'start'})
 }
 window.activateTravelTab=activateTravelTab;
@@ -166,7 +233,7 @@ function showTravelService(kind){const stays=kind==='stays';const form=$(stays?'
  $('#mgServiceAdvisory').textContent=stays?'No rooms or prices have been checked and no reservation has been made.':'No bus schedule or fare has been checked and no ticket has been issued.';
  section.hidden=false;section.dataset.kind=kind;section.scrollIntoView({behavior:'smooth',block:'start'})
 }
-$('#stayForm').addEventListener('submit',e=>{e.preventDefault();showTravelService('stays')});
+/* Duffel Stays search form is initialized by the authenticated module below. */
 $('#busForm').addEventListener('submit',e=>{e.preventDefault();showTravelService('buses')});
 $('#mgEditService').addEventListener('click',()=>activateTravelTab($('#mgServicePreview').dataset.kind||'stays',true));
 $('#mgExploreFlights').addEventListener('click',()=>activateTravelTab('flights',true));
@@ -179,7 +246,7 @@ activateTravelTab('flights');
 import {createClient} from "https://esm.sh/@supabase/supabase-js@2.57.0";
 const client=createClient("https://tjlanldknskbahzxwecw.supabase.co","sb_publishable_4kTdJhBYRsTwIu3UWGDhDw_BXmVrsXw",{auth:{persistSession:true,autoRefreshToken:true}});
 const get=id=>document.getElementById(id);
-let signup=false,pendingSearch=false;
+let signup=false,pendingSearch=false,pendingStaySearch=false;
 const escapeHTML=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const time=s=>s?String(s).slice(11,16):"—";
 function openAuth(){get("authModal").hidden=false;get("authEmail").focus()}
@@ -189,7 +256,7 @@ async function updateAccount(){const {data}=await client.auth.getSession();get("
 get("authClose").onclick=closeAuth;get("authModal").addEventListener("click",e=>{if(e.target===get("authModal"))closeAuth()});
 get("authSwitch").onclick=()=>{signup=!signup;setAuthMode()};
 get("accountBtn").onclick=async()=>{const {data}=await client.auth.getSession();if(data.session){await client.auth.signOut();await updateAccount()}else openAuth()};
-get("authForm").addEventListener("submit",async e=>{e.preventDefault();const email=get("authEmail").value.trim(),password=get("authPassword").value;get("authSubmit").disabled=true;get("authMessage").textContent="Please wait…";try{const result=signup?await client.auth.signUp({email,password}):await client.auth.signInWithPassword({email,password});if(result.error)throw result.error;if(signup&&!result.data.session){get("authMessage").textContent="Account created. Check your email to confirm your account, then sign in.";return}closeAuth();await updateAccount();if(pendingSearch){pendingSearch=false;await searchFlights()}}catch(err){get("authMessage").textContent=err.message||"Authentication failed"}finally{get("authSubmit").disabled=false}});
+get("authForm").addEventListener("submit",async e=>{e.preventDefault();const email=get("authEmail").value.trim(),password=get("authPassword").value;get("authSubmit").disabled=true;get("authMessage").textContent="Please wait…";try{const result=signup?await client.auth.signUp({email,password}):await client.auth.signInWithPassword({email,password});if(result.error)throw result.error;if(signup&&!result.data.session){get("authMessage").textContent="Account created. Check your email to confirm your account, then sign in.";return}closeAuth();await updateAccount();if(pendingSearch){pendingSearch=false;await searchFlights()}if(pendingStaySearch){pendingStaySearch=false;await mgSearchStays()}}catch(err){get("authMessage").textContent=err.message||"Authentication failed"}finally{get("authSubmit").disabled=false}});
 client.auth.onAuthStateChange(()=>{setTimeout(updateAccount,0)});updateAccount();
 const form=get("flightForm");const cloned=form.cloneNode(true);form.replaceWith(cloned);cloned.addEventListener("submit",async e=>{e.preventDefault();await searchFlights()});
 const AIRPORTS={MQP:"Kruger Mpumalanga",JNB:"Johannesburg O.R. Tambo",CPT:"Cape Town",DUR:"Durban King Shaka",HLA:"Lanseria",BFN:"Bloemfontein",PLZ:"Gqeberha",GRJ:"George",LHR:"London Heathrow",MPM:"Maputo"};
@@ -272,4 +339,102 @@ get("mgAccountClose").addEventListener("click",mgCloseAccount);
 get("mgAccountOverlay").addEventListener("click",e=>{if(e.target===get("mgAccountOverlay"))mgCloseAccount()});
 window.addEventListener("mg:account",()=>{get("mgAccountOverlay").hidden=false;mgLoadAccount()});
 get("mgAccountAction").addEventListener("click",async()=>{const {data:{session}}=await client.auth.getSession();mgCloseAccount();if(session){await client.auth.signOut();await updateAccount()}else openAuth()});
+
+/* Secure Duffel Stays search — uses the same authenticated Supabase client as Flights. */
+const mgStayFormOld=get("stayForm"),mgStayForm=mgStayFormOld.cloneNode(true);
+mgStayFormOld.replaceWith(mgStayForm);
+const mgStayButton=get("staySearchButton");
+const mgStaySection=get("mgStaysResults"),mgStayGrid=get("mgStaysCards"),mgStayStatus=get("mgStaysStatus");
+let mgStayListings=[],mgStayMetadata=null;
+const mgStayFallback='<svg viewBox="0 0 24 24" width="50" height="50" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8V4m18 4V4M3 16v5m18-5v5M3 10h18a2 2 0 0 1 2 2v5H1v-5a2 2 0 0 1 2-2Zm4 0V7h10v3"/></svg>';
+const mgStayMoney=n=>new Intl.NumberFormat("en-ZA",{style:"currency",currency:"ZAR",maximumFractionDigits:2}).format(n);
+function mgShowStayStatus(message,empty=false){
+ mgStaySection.hidden=false;
+ mgStaySection.dataset.hasResults="true";
+ mgStayStatus.textContent=message;
+ get("mgStaysEmpty").hidden=!empty;
+ mgStaySection.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function mgStayCards(){
+ mgStayGrid.replaceChildren();
+ const sort=get("mgStaysSort").value;
+ const list=[...mgStayListings];
+ if(sort==="price")list.sort((a,b)=>Number(a.indicative_zar??Infinity)-Number(b.indicative_zar??Infinity));
+ if(sort==="rating")list.sort((a,b)=>(Number(b.review_score??b.rating??0))-(Number(a.review_score??a.rating??0)));
+ const nights=mgStayMetadata?.nights||1;
+ for(const s of list){
+  const card=document.createElement("article");
+  card.className="mg-stay-card";
+  const media=document.createElement("div");media.className="mg-stay-media";
+  if(s.image_url){try{const url=new URL(s.image_url);if(url.protocol!=="https:")throw Error("not https");const img=document.createElement("img");img.src=url.href;img.alt=s.name+" accommodation";img.loading="lazy";img.referrerPolicy="no-referrer";img.addEventListener("error",()=>{media.classList.add("no-photo");media.replaceChildren();media.innerHTML=mgStayFallback});media.appendChild(img)}catch{media.classList.add("no-photo");media.innerHTML=mgStayFallback}}
+  else{media.classList.add("no-photo");media.innerHTML=mgStayFallback}
+  const label=document.createElement("span");label.className="mg-stay-test-label";label.textContent="TEST INVENTORY";media.appendChild(label);
+  const body=document.createElement("div");body.className="mg-stay-body";
+  const title=document.createElement("h3");title.className="mg-stay-name";title.textContent=s.name||"Accommodation";
+  const addr=document.createElement("p");addr.className="mg-stay-address";addr.textContent=[s.address,s.city,s.region].filter(Boolean).join(", ");
+  const metrics=document.createElement("div");metrics.className="mg-stay-metrics";
+  if(typeof s.review_score==="number"){const rating=document.createElement("span");rating.className="mg-stay-rating";rating.textContent=s.review_score.toFixed(1)+"/10";metrics.appendChild(rating)}
+  if(typeof s.rating==="number"){const star=document.createElement("span");star.className="mg-stay-stars";star.textContent=s.rating+"-star property";metrics.appendChild(star)}
+  const amenities=document.createElement("div");amenities.className="mg-stay-amenities";
+  for(const t of (s.amenities||[]).slice(0,3)){const badge=document.createElement("span");badge.textContent=t;amenities.appendChild(badge)}
+  const footer=document.createElement("div");footer.className="mg-stay-footer";
+  const price=document.createElement("div");price.className="mg-stay-price";
+  const strong=document.createElement("strong");
+  if(typeof s.indicative_zar==="number")strong.textContent=mgStayMoney(s.indicative_zar);
+  else if(typeof s.total_amount==="number"&&s.total_currency)strong.textContent=s.total_currency+" "+s.total_amount.toFixed(2);
+  else strong.textContent="Price unavailable";
+  const sub=document.createElement("small");
+  sub.textContent=(typeof s.indicative_zar==="number"?"Approx. total":"Supplier test total")+" · "+nights+" "+(nights===1?"night":"nights");
+  const original=document.createElement("small");original.textContent=typeof s.indicative_zar==="number"&&s.total_currency?("Supplier: "+s.total_currency+" "+Number(s.total_amount).toFixed(2)):"No ZAR estimate available";
+  price.append(strong,sub,original);
+  const expand=document.createElement("button");expand.type="button";expand.className="mg-stay-details-btn";expand.setAttribute("aria-expanded","false");expand.innerHTML='Details <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+  footer.append(price,expand);
+  const more=document.createElement("div");more.className="mg-stay-expanded";more.hidden=true;
+  const description=document.createElement("p");description.textContent=s.description||"Description not provided for this property.";
+  const details=document.createElement("p");details.textContent="Check-in: "+mgStayMetadata.check_in_date+" · Check-out: "+mgStayMetadata.check_out_date+" · "+mgStayMetadata.rooms+" room(s) · "+mgStayMetadata.adults+" guest(s).";
+  const availability=document.createElement("p");availability.textContent="Room selection and bookings are not yet enabled. Final rates, policies and availability must be checked through Duffel before checkout.";
+  more.append(description,details,availability);
+  expand.addEventListener("click",()=>{more.hidden=!more.hidden;expand.setAttribute("aria-expanded",String(!more.hidden));expand.firstChild.textContent=more.hidden?"Details ":"Hide "});
+  body.append(title,addr,metrics,amenities,footer,more);
+  card.append(media,body);mgStayGrid.appendChild(card)
+ }
+}
+get("mgStaysSort").addEventListener("change",mgStayCards);
+mgStayForm.addEventListener("submit",async e=>{e.preventDefault();await mgSearchStays()});
+async function mgSearchStays(){
+ const {data:{session}}=await client.auth.getSession();
+ if(!session){pendingStaySearch=true;openAuth();return}
+ const destination=get("stayDestination").value,check_in_date=get("stayCheckIn").value,check_out_date=get("stayCheckOut").value,adults=Number(get("stayAdults").value),rooms=Number(get("stayRooms").value);
+ if(!destination||!check_in_date||!check_out_date){mgShowStayStatus("Please choose a destination and check-in/check-out dates.");return}
+ if(check_out_date<=check_in_date){mgShowStayStatus("Check-out must be later than check-in.");return}
+ if(adults<rooms){mgShowStayStatus("There must be at least one adult per room.");return}
+ mgStaySection.dataset.hasResults="true";
+ mgStayGrid.replaceChildren();get("mgStaysEmpty").hidden=true;get("mgStaysAccess").hidden=true;
+ mgStayStatus.textContent="Searching Duffel test accommodation inventory…";
+ get("mgStaysCount").textContent="Searching hotels";
+ mgStaySection.hidden=false;
+ mgStayButton.disabled=true;mgStayButton.textContent="Searching hotels…";
+ mgStaySection.scrollIntoView({behavior:"smooth",block:"start"});
+ try{
+  const resp=await fetch("https://tjlanldknskbahzxwecw.supabase.co/functions/v1/mg-stays-search",{
+   method:"POST",headers:{"Content-Type":"application/json","apikey":"sb_publishable_4kTdJhBYRsTwIu3UWGDhDw_BXmVrsXw","Authorization":"Bearer "+session.access_token},
+   body:JSON.stringify({destination,check_in_date,check_out_date,adults,rooms})
+  });
+  const payload=await resp.json().catch(()=>({}));
+  if(!resp.ok){
+   if(payload.code==="STAYS_ACCESS_PENDING"){get("mgStaysAccess").hidden=false;mgStayStatus.textContent="Your Duffel account needs separate Stays API approval.";get("mgStaysCount").textContent="Stays access pending";return}
+   throw new Error(payload.error||"Hotel search failed. Please try again.")
+  }
+  mgStayListings=payload.results||[];mgStayMetadata=payload;
+  mgStayStatus.textContent=mgStayListings.length+" accommodation "+(mgStayListings.length===1?"option":"options")+" returned for "+payload.destination+" · "+payload.nights+" "+(payload.nights===1?"night":"nights");
+  get("mgStaysCount").textContent=mgStayListings.length+" hotel "+(mgStayListings.length===1?"result":"results");
+  get("mgStaysEmpty").hidden=mgStayListings.length>0;
+  get("mgStaysPriceNote").textContent="Duffel test inventory only. Indicative ZAR rates use reference foreign exchange data where available and are not final prices. No accommodation can be purchased here.";
+  mgStayCards();
+ }catch(err){
+  mgStayListings=[];mgStayGrid.replaceChildren();
+  mgStayStatus.textContent=err.message||"Accommodation search unavailable.";
+  get("mgStaysCount").textContent="Search failed";
+ }finally{mgStayButton.disabled=false;mgStayButton.innerHTML='<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg> Search hotels'}
+}
 </script></body></html>
