@@ -85,12 +85,13 @@ export function initMajorgloryPortal({client,openAuth,updateAccount,get}){
   renderOverview();renderTrips();renderSaved();renderTickets();renderSettings();
  }
  async function open(){
-  overlay.hidden=false;document.body.style.overflow="hidden";goTab("overview");
+  overlay.hidden=false;document.body.style.overflow="hidden";goTab("overview");get("mgPortalLoading").hidden=false;
   get("mgPortalGuest").hidden=true;get("mgPortalAuthed").hidden=true;
   status("mgPortalLoadStatus","");
   get("mgPortalPageTitle").textContent="Your travel dashboard";
   const {data:{user},error}=await client.auth.getUser();
   if(!portalActive())return;
+  get("mgPortalLoading").hidden=true;
   if(error||!user){
    currentUser=null;currentProfile=null;bookingData=[];savedData=[];ticketData=[];
    get("mgPortalGuest").hidden=false;
@@ -221,6 +222,8 @@ export function initMajorgloryPortal({client,openAuth,updateAccount,get}){
  overlay.addEventListener("click",e=>{if(e.target===overlay)close()});
  document.addEventListener("keydown",e=>{if(e.key==="Escape"&&portalActive())close()});
  get("mgPortalSignOut").addEventListener("click",signOut);
+ get("mgPortalRefresh").addEventListener("click",async()=>{if(!currentUser){await open();return}const button=get("mgPortalRefresh");button.disabled=true;status("mgPortalLoadStatus","Refreshing your travel account…");try{await fetchData()}catch(e){status("mgPortalLoadStatus","Could not refresh your account.",true)}finally{button.disabled=false}});
+
  get("mgPortalGuestSignIn").addEventListener("click",()=>{close();openAuth()});
  get("mgPortalTripsFilter").addEventListener("change",renderTrips);
  get("mgSavedCategory").addEventListener("change",populatePlaces);populatePlaces();
