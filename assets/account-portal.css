@@ -202,3 +202,9 @@
 @keyframes mg-skeleton{0%{background-position:200% 0}100%{background-position:-50% 0}}
 @media(prefers-reduced-motion:reduce){.mg-portal-skeleton{animation:none}}
 @media(max-width:600px){.mg-portal-skeleton-row{grid-template-columns:repeat(2,1fr)}.mg-portal-skeleton-row .mg-portal-skeleton:last-child{display:none}.mg-portal-skeleton-hero{height:155px}}
+
+/* Icon sizing guards: only scale the decorative guest globe, never CTA arrows */
+.mg-portal-guest>svg{width:125px;height:125px;color:#89ddd3;display:block;flex:none}
+.mg-portal-guest .mg-portal-btn svg{width:17px!important;height:17px!important;display:block!important;color:inherit}
+.mg-portal-setting-row>svg{width:21px;height:21px;flex:none;color:#13838a}
+@media(max-width:760px){.mg-portal-guest>svg{display:none!important}}
