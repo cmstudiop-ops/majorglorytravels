@@ -183,3 +183,11 @@
  .mg-portal-quick-icon{height:33px;width:33px}
  .mg-portal-quick-icon svg{height:18px;width:18px}
 }
+
+/* Accessible desktop account launcher: balanced with existing header links */
+.mg-header-account{border:1px solid #dce9ed;background:#f3f9f9;color:#126a74;border-radius:100px;padding:11px 13px;display:inline-flex;align-items:center;gap:9px;font:800 12px Manrope;cursor:pointer;white-space:nowrap;flex:none}
+.mg-header-account svg{width:18px;height:18px}
+.mg-header-account:hover{background:#e5f5f3;border-color:#badbd9}
+.mg-header-account:focus-visible{outline:2px solid #087e85;outline-offset:3px}
+@media (min-width:901px) and (max-width:1230px){header .nav{gap:12px}header .links{gap:17px;font-size:12px}header .brand{font-size:18px}header .navbtn{padding:12px 15px;font-size:12px}.mg-header-account{font-size:11px;padding:10px 12px}}
+@media(max-width:900px){.mg-header-account{display:none!important}}
